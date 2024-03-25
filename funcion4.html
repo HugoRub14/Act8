@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Funciones 4</title>
+</head>
+<body>
+
+<script>
+  const names = ['John', 'Doe', 'Jane', 'Mark', 'Alice'];
+
+  function isShort(name) {
+    return name.length < 5;
+  }
+
+  const shortNames = names.filter(isShort);
+
+  document.write("<h2>Names shorter than 5 characters:</h2>");
+  document.write("<ul>");
+  shortNames.forEach(function(name) {
+    document.write("<li>" + name + "</li>");
+  });
+  document.write("</ul>");
+</script>
+
+</body>
+</html>

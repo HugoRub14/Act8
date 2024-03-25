@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Funciones: Tarea 1</title>
+</head>
+
+<body>
+
+<p id="result"></p>
+
+<script>
+  const nombres = ['Chris', 'Li Kang', 'Anne', 'Francesca', 'Mustafa', 'Tina', 'Bert', 'Jada'];
+
+  function chooseName(namesArray, paraElement) {
+    const indiceAleatorio = Math.floor(Math.random() * namesArray.length);
+    const nombreElegido = namesArray[indiceAleatorio];
+    paraElement.textContent = nombreElegido;
+  }
+
+  const para = document.getElementById('result');
+
+  chooseName(nombres, para);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Improved Choose Name Function</title>
+</head>
+<body>
+
+<p id="result"></p>
+
+<script>
+  function random(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  function chooseName(namesArray) {
+    const randomIndex = random(0, namesArray.length - 1);
+    return namesArray[randomIndex];
+  }
+
+  const names = ['Chris', 'Li Kang', 'Anne', 'Francesca', 'Mustafa', 'Tina', 'Bert', 'Jada'];
+
+  const para = document.getElementById('result');
+
+  const chosenName = chooseName(names);
+  para.textContent = chosenName;
+</script>
+
+</body>
+</html>

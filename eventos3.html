@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Change Background Color</title>
+<style>
+  .button-bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+  }
+
+  .button-bar button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+</style>
+</head>
+<body>
+
+<div class="button-bar">
+  <button data-color="red">Red</button>
+  <button data-color="green">Green</button>
+  <button data-color="blue">Blue</button>
+</div>
+
+<script>
+  const buttonBar = document.querySelector('.button-bar');
+
+  buttonBar.addEventListener('click', function(event) {
+    if (event.target.tagName === 'BUTTON') {
+      const color = event.target.dataset.color;
+      buttonBar.style.backgroundColor = color;
+    }
+  });
+</script>
+
+</body>
+</html>

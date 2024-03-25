@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Canvas Rectangle</title>
+</head>
+<body>
+
+<canvas id="canvas" width="400" height="400"></canvas>
+
+<script>
+  const canvas = document.getElementById('canvas');
+  const ctx = canvas.getContext('2d');
+
+  function drawRectangle(x, y, width, height, color) {
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+
+    ctx.fillStyle = color;
+
+
+    ctx.fillRect(x, y, width, height);
+  }
+
+  const rectX = 50;
+  const rectY = 50;
+  const rectWidth = 100;
+  const rectHeight = 75;
+  const rectColor = 'blue';
+
+
+  drawRectangle(rectX, rectY, rectWidth, rectHeight, rectColor);
+</script>
+
+</body>
+</html>

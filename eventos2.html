@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mover círculo con teclado</title>
+</head>
+<body>
+
+<canvas id="canvas" width="400" height="400" style="border:1px solid black;"></canvas>
+
+<script>
+  const canvas = document.getElementById('canvas');
+  const ctx = canvas.getContext('2d');
+
+  let x = canvas.width / 2; 
+  let y = canvas.height / 2; 
+  const size = 20; 
+  function drawCircle(x, y, size) {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.beginPath();
+    ctx.arc(x, y, size, 0, Math.PI * 2);
+    ctx.fillStyle = 'blue';
+    ctx.fill();
+    ctx.closePath();
+  }
+
+  document.addEventListener('keydown', function(event) {
+    const speed = 5; 
+
+    switch (event.key) {
+      case 'w':
+        y -= speed;
+        break;
+      case 'a':
+        x -= speed;
+        break;
+      case 's':
+        y += speed;
+        break;
+      case 'd':
+        x += speed;
+        break;
+    }
+
+    drawCircle(x, y, size);
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Encuentra el numero</title>
+</head>
+<body>
+<p id="result"></p>
+
+<script>
+const nameToFind = 'John';
+const para = document.getElementById('result');
+const phonebook = [ 
+  { name: 'John', phone: '1234567890' },
+  { name: 'Jane', phone: '0987654321' },
+  { name: 'Doe', phone: '5555555555' }
+];
+
+for (let index in phonebook) {
+  const entry = phonebook[index];
+  if (entry.name === nameToFind) {
+    para.textContent = `Nombre: ${entry.name}, Numero: ${entry.phone}`;
+    break;
+  }
+}
+</script>
+</body>
+</html>

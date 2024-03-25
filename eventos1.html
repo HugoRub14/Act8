@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Button Text Change</title>
+</head>
+<body>
+
+<button id="btn">Click me</button>
+
+<script>
+  const button = document.getElementById('btn');
+
+  let clicked = false;
+
+  function handleClick() {
+    if (clicked) {
+      button.textContent = 'Click me';
+    } else {
+      button.textContent = 'Clicked';
+    }
+    
+    clicked = !clicked;
+  }
+
+  button.addEventListener('click', handleClick);
+</script>
+
+</body>
+</html>
